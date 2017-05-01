@@ -1,0 +1,24 @@
+.fondoCarta{
+	background-color: #6F9FF0;
+}
+
+.fondoCarta2{
+	background-color: #ECE753;
+}
+
+.fondoCarta3{
+	background-color: #A256F0;
+}
+
+.colorTitulo{
+	text-decoration-color:#CB8014;
+}
+
+.footerText{
+	color:#F6D811;
+}
+
+body{
+	background-color: #FEFEFE;
+	/*background-color: #008291; Colord de Proteco*/
+}
