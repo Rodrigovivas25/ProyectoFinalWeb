@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
-	<meta name="csrf-token" content="p7eNMMZxWCKixO2HWAOoxMO6hW96dNzko8L7sHNx">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">-->
+	<!--<meta name="csrf-token" content="p7eNMMZxWCKixO2HWAOoxMO6hW96dNzko8L7sHNx">-->
 	<link rel="shortcut icon" type="image/png" href="http://proteco.mx/favicon.ico">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="http://proteco.mx/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
@@ -13,6 +13,19 @@
 	<title>Programa de Tecnología en Cómputo</title>
 </head>
 <body>
+	
+	<!--Script de facebook-->
+	<div id="fb-root"></div>
+  	<script>(function(d, s, id) {
+    	var js, fjs = d.getElementsByTagName(s)[0];
+    	if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.9";
+		fjs.parentNode.insertBefore(js, fjs);
+  	}(document, 'script', 'facebook-jssdk'));
+  	</script>
+
+	
 	<header>
 	    <div class="navbar-fixed">
 	        <nav class="ptc" role="navigation">
@@ -30,9 +43,9 @@
 				  	<a class='dropdown-button btn' href='#' data-activates='dropdown1'>Drop Me!</a>
 				  	-->
 	                <ul class="right hide-on-med-and-down">
-	                    <li><a class="white-text" href="#">Cursos</a></li>
-	                    <li class="active"><a class="white-text" href="http://proteco.mx/convocatoria">Convocatoria</a></li>
-	                    <li><a class="white-text" target="_blank" href="https://www.facebook.com">Iniciar Sesión</a></li>
+	                    <li><a class="waves-effect waves-light white-text" href="#">Cursos</a></li>
+	                    <li class="active"><a class="waves-effect waves-light white-text" href="#">Convocatoria</a></li>
+	                    <li><a class="waves-effect waves-light white-text" target="_blank" href="https://www.facebook.com">Iniciar Sesión</a></li>
 	                </ul>
 	                <ul id="nav-mobile" class="side-nav" style="transform: translateX(-100%);">
 	                    <li><a href="http://proteco.mx/cursos">Cursos</a></li>
@@ -46,10 +59,23 @@
 	        </nav>
 	    </div>
 	</header>
+
+	<!--<div class="parallax-container">
+    	<div class="parallax"><img src="img/background1.jpg"></div>
+  	</div>
+  	<div class="section white">
+    	<div class="row container">
+      	<h2 class="header">Parallax</h2>
+      	<p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+    	</div>
+  	</div>
+
+
 	<div class="center">
 		<h2 style="z-index: 2; position: absolute; color: white; margin-top: 10%;">La idea es que aqui valla un carousel, pero como no me salio esperenlo pronto en una nueva actualizacion.</h2>
 		<img src="https://yarkozzz.files.wordpress.com/2015/03/detective-privado-detective-informatico-infidelidad-6710-mla5101090971_092013-f1.jpg" width="100%" height="500" style="z-index: 1; position: relative;" >
-	</div>
+	</div>-->
+	
 	<div class="container">
 		<!--<div class="carousel">
 		    <a class="carousel-item" href="#one!"><img src="img/imagen1.jpg"></a>
@@ -60,8 +86,8 @@
 		<div class="row">
             <div class="col s12 m6">
             	<div class="card fondoCarta">
-	          		<div class="card-content black-text">
-		                <span class="titulo" style="color: #040404">Convocatoria</span>
+	          		<div class="card-content white-text">
+		                <span class="titulo footerText">Convocatoria</span>
 		                <p>
 		                    La Facultad de Ingeniería convoca a los alumnos de todas las carreras de
 		                    Ingeniería a participar en el concurso para la selección de candidatos a su programa
@@ -71,7 +97,7 @@
 		        </div>
                 <div class="card fondoCarta2">
 	          		<div class="card-content black-text">
-		                <span class="titulo" style="color: #040404">OBJETIVO DEL PROGRAMA</span>
+		                <span class="titulo ptc-text">OBJETIVO DEL PROGRAMA</span>
 		                <p>
 		                    Establecer un proceso permanente, con herramientas de cómputo, para la
 		                    formación de personal docente y de investigación, en las diferentes áreas de las
@@ -84,8 +110,8 @@
             </div>
             <div class="col s12 m6">
             	<div class="card fondoCarta3">
-	          		<div class="card-content black-text">
-			            <span class="titulo" style="color: #040404">Ingreso al PROTECO</span>
+	          		<div class="card-content white-text">
+			            <span class="titulo footerText">Ingreso al PROTECO</span>
 			            <p>
 			                Para iniciar el proceso de ingreso al PROTECO sigue los siguientes pasos:
 			                <br><br>
@@ -98,24 +124,40 @@
 			                Documentos descargables para el ingreso al PROTECO:
 			            </p>
 			            <ul class="collection with-header">
-			                <li class="collection-item" style="background-color: #E5A3F8"><div>Convocatoria<a href="http://proteco.mx/archivos/convocatoria.pdf" class="secondary-content"><i class="material-icons">file_download</i></a></div></li>
-			                <li class="collection-item" style="background-color: #E5A3F8"><div>Solicitud de inscripción<a href="http://proteco.mx/archivos/solicitud-de-inscripcion.pdf" class="secondary-content"><i class="material-icons">file_download</i></a></div></li>
-			                <li class="collection-item" style="background-color: #E5A3F8"><div>Carta compromiso<a href="http://proteco.mx/archivos/carta-compromiso.pdf" class="secondary-content"><i class="material-icons">file_download</i></a></div></li>
+			                <li class="collection-item" style="background-color: #E5A3F8"><div class="black-text">Convocatoria<a href="http://proteco.mx/archivos/convocatoria.pdf" class="secondary-content"><i class="material-icons">file_download</i></a></div></li>
+			                <li class="collection-item" style="background-color: #E5A3F8"><div class="black-text">Solicitud de inscripción<a href="http://proteco.mx/archivos/solicitud-de-inscripcion.pdf" class="secondary-content"><i class="material-icons">file_download</i></a></div></li>
+			                <li class="collection-item" style="background-color: #E5A3F8"><div class="black-text">Carta compromiso<a href="http://proteco.mx/archivos/carta-compromiso.pdf" class="secondary-content"><i class="material-icons">file_download</i></a></div></li>
 			            </ul>
 			        </div>
 			    </div>
             </div>
         </div>
-		<div class="row">
-            <div class="col s12 m8 offset-l2">
-                <div class="card-panel ptc">
-                    <span class="white-text">
-                        <img class="responsive-img" src="http://proteco.mx/img/cartel.jpg">
-                    </span>
+    </div>
+
+    <div class="row">
+    	<div class="col s12 m1"><br></div>
+        <div class="col s12 m6">
+            <div class="card-panel ptc">
+                <span class="white-text">
+                    <img class="responsive-img" src="http://proteco.mx/img/cartel.jpg">
+                </span>
+            </div>
+        </div>
+        <!--Carta del recuadro de facebook-->
+        <div class="col s12 m3">
+            <div class="card-panel fondoCarta4">
+                <div class="fb-page" data-href="https://www.facebook.com/proteco/?ref=ts&amp;fref=ts" data-tabs="timeline" data-width="400" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+	                <blockquote cite="https://www.facebook.com/proteco/?ref=ts&amp;fref=ts" class="fb-xfbml-parse-ignore">
+		                <a href="https://www.facebook.com/proteco/?ref=ts&amp;fref=ts" class="titulo white-text">PROTECO</a>
+	                </blockquote>
                 </div>
             </div>
-    	</div>
-    </div>
+            <div class="card-panel fondoCarta3 center">
+		    	<a class="twitter-timeline"  href="https://twitter.com/search?q=%40PROTECO" data-widget-id="859132255611961345">Tweets sobre @PROTECO</a>
+ 	           	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    		</div>
+        </div>
+	</div>
 	<footer class="page-footer" style="background-color: #00838F">
             <div class="container">
                 <div class="row">
