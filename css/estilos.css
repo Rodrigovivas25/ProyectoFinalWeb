@@ -25,3 +25,32 @@ nav{
 main {
   flex: 1 0 auto;
 }
+
+.fondoCarta{
+	background-color: #008291;
+}
+
+.fondoCarta2{
+	background-color: #F3EC26;
+}
+
+.fondoCarta3{
+	background-color: #983CF6;
+}
+
+.fondoCarta4{
+	background-color: #188E0C;
+}
+
+.colorTitulo{
+	text-decoration-color:#CB8014;
+}
+
+.footerText{
+	color:#F6D811;
+}
+
+body{
+	background-color: #FEFEFE;
+	/*background-color: #008291; Colord de Proteco*/
+}
