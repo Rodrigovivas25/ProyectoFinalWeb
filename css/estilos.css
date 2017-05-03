@@ -1,29 +1,30 @@
+@import url(https://fonts.googleapis.com/css?family=Abel);
+
+html {
+    font-family: 'Abel', sans-serif;
+
+}
+
+nav .brand-logo {
+    position: absolute;
+    padding: 5px;
+}
+
+.titulo {
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
 p{
   text-align: justify;
 }
 
-.footercop{
-  background-color: #e8ebef;
-}
-
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
 nav{
-  background-color: #0077ff;
+  background-color: #008291;
 }
-
-
 
 .textcolor{
   color: #82b1ff;
-}
-
-main {
-  flex: 1 0 auto;
 }
 
 .fondoCarta{
@@ -42,15 +43,14 @@ main {
 	background-color: #188E0C;
 }
 
-.colorTitulo{
-	text-decoration-color:#CB8014;
-}
-
-.footerText{
+.color-title-gold{
 	color:#F6D811;
 }
 
-body{
-	background-color: #FEFEFE;
-	/*background-color: #008291; Colord de Proteco*/
+.color-title-blue{
+	color: #008291;
+}
+
+.ptc{
+	background-color: #008291;
 }
