@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Prueba</title>
+	<script type="text/javascript" src="angular.min.js"></script>
+</head>
+<body>
+	<input type="text" name="prubea" placeholder="Ingresa tu palabra.." ng-model="buscarfruta">
+	<div ng-controller="listas">
+		<ul>
+			<li ng-repeat="fruta in frutas | filter:buscarfruta">{{fruta}}</li>
+		</ul>
+	</div>
+  	<script type="text/javascript">
+  		var miApp = angular.module('filtrodatos',[]);
+  		miApp.controller('listas', function($scope){
+  			$scope.frutas = ['kiwi', 'mango', 'banana'];
+  		});
+  	</script>
+</body>
+</html>

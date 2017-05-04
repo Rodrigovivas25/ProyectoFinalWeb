@@ -1,16 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <link rel="shortcut icon" type="image/png" href="http://proteco.mx/favicon.ico">
-	<!--<link rel="shortcut icon" type="image/png" href="http://proteco.mx/favicon.ico">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link href="http://proteco.mx/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
-	<link href="http://proteco.mx/css/materialize.clockpicker.css" type="text/css" rel="stylesheet" media="screen,projection">
-	<link href="http://proteco.mx/css/style.css" type="text/css" rel="stylesheet" media="screen,projection">
-	<link rel="stylesheet" type="text/css" href="css/estilos.css">-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Programa de Tecnología en Cómputo</title>
@@ -19,50 +13,42 @@
 	
 	<!--Script de facebook-->
 	<div id="fb-root"></div>
-  	<script>(function(d, s, id) {
-    	var js, fjs = d.getElementsByTagName(s)[0];
-    	if (d.getElementById(id)) return;
-		js = d.createElement(s); js.id = id;
-		js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.9";
-		fjs.parentNode.insertBefore(js, fjs);
-  	}(document, 'script', 'facebook-jssdk'));
+  	<script>
+  		(function(d, s, id) {
+	    	var js, fjs = d.getElementsByTagName(s)[0];
+	    	if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.9";
+			fjs.parentNode.insertBefore(js, fjs);
+  		}(document, 'script', 'facebook-jssdk'));
   	</script>
 
-	
 	<header>
 	    <div class="navbar-fixed">
 	        <nav role="navigation">
 	            <div class="nav-wrapper container">
 	                <a href="#" class="brand-logo"><img src="http://proteco.mx/img/tipo.png"></a>
-	                <!--
-	                <ul id='dropdown1' class='dropdown-content'>
-				    <li><a href="#!">one</a></li>
-				    <li><a href="#!">two</a></li>
-				    <li class="divider"></li>
-				    <li><a href="#!">three</a></li>
-				    <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-				    <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-				  	</ul>
-				  	<a class='dropdown-button btn' href='#' data-activates='dropdown1'>Drop Me!</a>
-				  	-->
 	                <ul class="right hide-on-med-and-down">
-	                    <li><a class="waves-effect waves-light white-text" href="#">Cursos</a></li>
+	                    <li><a class="waves-effect waves-light white-text" href="index.html">Cursos</a></li>
 	                    <li class="active"><a class="waves-effect waves-light white-text" href="#">Convocatoria</a></li>
 	                    <li><a class="waves-effect waves-light white-text" target="_blank" href="https://www.facebook.com">Iniciar Sesión</a></li>
 	                </ul>
 	                <ul id="nav-mobile" class="side-nav" style="transform: translateX(-100%);">
-	                    <li><a href="http://proteco.mx/cursos">Cursos</a></li>
-	                    <li class="active"><a class="ptc-text" href="http://proteco.mx/convocatoria">Convocatoria</a></li>
-	                    <li><a class="dropdown-button ptc-text">Iniciar Sesión</a></li>
+	                    <li><a href="index.html">Cursos</a></li>
+	                    <li class="active"><a href="#">Convocatoria</a></li>
+	                    <li><a href="https://www.facebook.com">Iniciar Sesión</a></li>
 	                </ul>
 	                <a href="#" data-activates="nav-mobile" class="button-collapse">
-	                	<i class="material-icons ptc-text">menu</i>
+	                	<i class="material-icons">menu</i>
 	                </a>
 	            </div>  
 	        </nav>
 	    </div>
 	</header>
-
+	
+	<div class="parallax-container">
+      	<div class="parallax"><img src="https://yarkozzz.files.wordpress.com/2015/03/detective-privado-detective-informatico-infidelidad-6710-mla5101090971_092013-f1.jpg" alt="Tu destino."></div>
+    </div>
 	<!--<div class="parallax-container">
     	<div class="parallax"><img src="img/background1.jpg"></div>
   	</div>
@@ -214,16 +200,22 @@
                 </div>
             </div>
         </footer>
-    <script type="text/javascript">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script>
     	$(document).ready(function(){
 	    $('.carousel').carousel();
 	    });
     </script>
-	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script src="http://proteco.mx/js/materialize.min.js"></script>
-	<script src="http://proteco.mx/js/materialize.clockpicker.js"></script>
-	<script src="http://proteco.mx/js/init.js"></script>
-	<script src="http://proteco.mx/js/masonry.pkgd.min.js"></script>
-	<script src="http://proteco.mx/js/isotope.pkgd.min.js"></script>
+    <script>
+	    $(document).ready(function(){
+	    	$(".button-collapse").sideNav();
+	  	});
+  	</script>
+  	<script>
+  		$(document).ready(function(){
+      		$('.parallax').parallax();
+    	});
+  	</script>
 </body>
 </html>

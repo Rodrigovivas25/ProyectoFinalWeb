@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
@@ -10,40 +10,31 @@
     <title>Programa de Tecnología en Cómputo</title>
   </head>
   <body>
+
       <header>
         <div class="navbar-fixed">
             <nav role="navigation">
                 <div class="nav-wrapper container">
                     <a href="#" class="brand-logo"><img src="http://proteco.mx/img/tipo.png"></a>
-                    <!--
-                    <ul id='dropdown1' class='dropdown-content'>
-              <li><a href="#!">one</a></li>
-              <li><a href="#!">two</a></li>
-              <li class="divider"></li>
-              <li><a href="#!">three</a></li>
-              <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-              <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-              </ul>
-              <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Drop Me!</a>
-              -->
                     <ul class="right hide-on-med-and-down">
                         <li class="active"><a class="waves-effect waves-light white-text" href="#">Cursos</a></li>
-                        <li><a class="waves-effect waves-light white-text" href="#">Convocatoria</a></li>
+                        <li><a class="waves-effect waves-light white-text" href="convocatoria.html">Convocatoria</a></li>
                         <li><a class="waves-effect waves-light white-text" target="_blank" href="https://www.facebook.com">Iniciar Sesión</a></li>
                     </ul>
                     <ul id="nav-mobile" class="side-nav" style="transform: translateX(-100%);">
                         <li class="active"><a href="http://proteco.mx/cursos">Cursos</a></li>
-                        <li><a class="ptc-text" href="http://proteco.mx/convocatoria">Convocatoria</a></li>
-                        <li><a class="dropdown-button ptc-text">Iniciar Sesión</a></li>
+                        <li><a class="color-title-gold" href="convocatoria.html">Convocatoria</a></li>
+                        <li><a class="color-title-gold" href="#">Iniciar Sesión</a></li>
                     </ul>
                     <a href="#" data-activates="nav-mobile" class="button-collapse">
-                      <i class="material-icons ptc-text">menu</i>
+                      <i class="material-icons">menu</i>
                     </a>
                 </div>  
             </nav>
         </div>
     </header>
     <main>
+
     <div>
       <h5 class="center color-title-blue">CURSOS INTERSEMESTRALES</h5>
       <div class="container">
@@ -446,9 +437,11 @@
   </body>
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script type="text/javascript" src="js/cursosFiltro.js"></script>
   <script>
   $(document).ready(function(){
-  $(".button-collapse").sideNav();
+    $(".button-collapse").sideNav();
   });
   </script>
 </html>
