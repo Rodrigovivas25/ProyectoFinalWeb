@@ -21,7 +21,7 @@
                         <li><a class="waves-effect waves-light white-text" href="convocatoria.html">Convocatoria</a></li>
                         <li><a class="waves-effect waves-light white-text" target="_blank" href="https://www.facebook.com">Iniciar Sesión</a></li>
                     </ul>
-                    <ul id="nav-mobile" class="side-nav" style="transform: translateX(0px);">
+                    <ul id="nav-mobile" class="side-nav">
                         <li class="active"><a href="http://proteco.mx/cursos" class="color-title-gold">Cursos</a></li>
                         <li><a href="convocatoria.html" class="color-title-gold">Convocatoria</a></li>
                         <li><a href="#" class="color-title-gold">Iniciar Sesión</a></li>
@@ -494,13 +494,13 @@
           <div class="carousel-fixed-item center">
             <a class="btn waves-effect ptc white-text darken-text-2" href="convocatoria.html">Unete a PROTECO</a>
           </div>
-          <div class="carousel-item white-text" href="#one!" style="background-image: url(img/carousel1.jpg); background-size: 100%;background-position: top;">
+          <div class="carousel-item white-text" href="#one!" style="background-image: url(img/carousel1.jpg); background-size: 100%;background-position: top; background-repeat:no-repeat;">
           </div>
-          <div class="carousel-item white-text" href="#two!" style="background-image: url(img/carousel2.jpg); background-position: center; background-size: 100%;">
+          <div class="carousel-item white-text" href="#two!" style="background-image: url(img/carousel2.jpg); background-position: center; background-size: 100%; background-repeat:no-repeat;">
           </div>
-          <div class="carousel-item white-text" href="#three!" style="background-image: url(img/carousel3.jpg); background-position: center;background-size: 100%;">
+          <div class="carousel-item white-text" href="#three!" style="background-image: url(img/carousel3.jpg); background-position: center;background-size: 100%; background-repeat:no-repeat;">
           </div>
-          <div class="carousel-item white-text" href="#four!" style="background-image: url(img/carousel4.jpg); background-position: center;background-size: 100%;">
+          <div class="carousel-item white-text" href="#four!" style="background-image: url(img/carousel4.jpg); background-position: center;background-size: 100%; background-repeat:no-repeat;">
           </div>
         </div>
       </div>
@@ -603,6 +603,24 @@
         </div>
       </div>
     </div>
+    <div class="container">
+    <div class="row">
+    <div class=" col m1">
+      <br>
+    </div>
+      <div class="col s12 m5">
+        <div class="card-panel fondoCarta4 center">
+          <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fproteco&tabs=timeline&width=370&height=400&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="370" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        </div>
+      </div>
+      <div class="col s12 m5">
+        <div class="card-panel fondoCarta3 center">
+          <a class="twitter-timeline"  href="https://twitter.com/search?q=%40PROTECO" data-widget-id="859132255611961345">Tweets sobre @PROTECO</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
+      </div>
+      </div>
+    </div>
     </main>
     <footer class="page-footer" style="background-color: #00838F">
             <div class="container">
@@ -662,9 +680,8 @@
   <script type="text/javascript" src="js/angular.min.js"></script>
   <script src="js/app.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
-  <script type="text/javascript" src="js/cursosFiltro.js"></script>
   <script>
-    $(".button-collapse").sideNav();
+    $('.button-collapse').sideNav();
   </script>
   <script>
      $('.carousel.carousel-slider').carousel({fullWidth: true});
