@@ -34,3 +34,16 @@ function movieCtrl(){
 }
 
 })();
+
+$(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+  });
+
+$('.carousel.carousel-slider').carousel({fullWidth: true});
+
+
+  $('.tap-target').tapTarget('open');
+  $('.tap-target').tapTarget('close');
+        
+ var options = [{selector: '#image-test', offset: 500, callback: function(el) { Materialize.fadeInImage($(el)); } } ]; Materialize.scrollFire(options);

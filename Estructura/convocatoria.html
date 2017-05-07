@@ -24,54 +24,47 @@
   	</script>
 
 	<header>
-	    <div class="navbar-fixed">
-	        <nav role="navigation">
-	            <div class="nav-wrapper container">
-	                <a href="#" class="brand-logo"><img src="http://proteco.mx/img/tipo.png"></a>
-	                <ul class="right hide-on-med-and-down">
-	                    <li><a class="waves-effect waves-light white-text" href="index.html">Cursos</a></li>
-	                    <li class="active"><a class="waves-effect waves-light white-text" href="#">Convocatoria</a></li>
-	                    <li><a class="waves-effect waves-light white-text" target="_blank" href="https://www.facebook.com">Iniciar Sesión</a></li>
-	                </ul>
-	                <ul id="nav-mobile" class="side-nav" style="transform: translateX(-100%);">
-	                    <li><a href="index.html">Cursos</a></li>
-	                    <li class="active"><a href="#">Convocatoria</a></li>
-	                    <li><a href="https://www.facebook.com">Iniciar Sesión</a></li>
-	                </ul>
-	                <a href="#" data-activates="nav-mobile" class="button-collapse">
-	                	<i class="material-icons">menu</i>
-	                </a>
-	            </div>  
-	        </nav>
-	    </div>
-	</header>
+      <div class="navbar-fixed">
+        <nav role="navigation">
+          <ul id="dropdown1" class="dropdown-content">
+            <li><a href="#!">Inicia Sesión</a></li>
+          </ul>
+          <div class="nav-wrapper container">
+            <a href="#" class="brand-logo"><img src="http://proteco.mx/img/tipo.png"></a>
+            <ul class="right hide-on-med-and-down">
+              <li><a class="waves-effect waves-light white-text" href="index.html">Cursos</a></li>
+              <li class="active"><a class="waves-effect waves-light white-text" href="convocatoria.html">Convocatoria</a></li>
+              <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Entrar<i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+            <ul id="nav-mobile" class="side-nav">
+              <li class="active"><a href="#" class="color-title-gold">Cursos</a></li>
+              <li><a href="convocatoria.html" class="color-title-gold">Convocatoria</a></li>
+              <li><a href="#" class="color-title-gold">Entrar</a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse">
+              <i class="material-icons white-text">menu</i>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
 	
 	<div class="parallax-container">
       	<div class="parallax"><img src="https://yarkozzz.files.wordpress.com/2015/03/detective-privado-detective-informatico-infidelidad-6710-mla5101090971_092013-f1.jpg" alt="Tu destino."></div>
     </div>
-	<!--<div class="parallax-container">
-    	<div class="parallax"><img src="img/background1.jpg"></div>
-  	</div>
-  	<div class="section white">
-    	<div class="row container">
-      	<h2 class="header">Parallax</h2>
-      	<p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
-    	</div>
-  	</div>
 
 
-	<div class="center">
-		<h2 style="z-index: 2; position: absolute; color: white; margin-top: 10%;">La idea es que aqui valla un carousel, pero como no me salio esperenlo pronto en una nueva actualizacion.</h2>
-		<img src="https://yarkozzz.files.wordpress.com/2015/03/detective-privado-detective-informatico-infidelidad-6710-mla5101090971_092013-f1.jpg" width="100%" height="500" style="z-index: 1; position: relative;" >
-	</div>-->
-	
-	<div class="container">
-		<!--<div class="carousel">
-		    <a class="carousel-item" href="#one!"><img src="img/imagen1.jpg"></a>
-		    <a class="carousel-item" href="#two!"><img src="img/imagen2.jpg"></a>
-		    <a class="carousel-item" href="#three!"><img src="img/imagen3.jpg"></a>
-		    <a class="carousel-item" href="#four!"><img src="img/imagen4.jpg"></a>
-  		</div>-->
+
+    <div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s3"><a class="active" href="#test1">Documentos Convocatoria</a></li>
+        <li class="tab col s3"><a href="#test2">Imagen Convocatoria</a></li>
+      </ul>
+    </div> 
+  </div>
+
+	<div id="test1" class="col s12">
 		<div class="row">
             <div class="col s12 m6">
             	<div class="card fondoCarta">
@@ -113,17 +106,16 @@
 			                Documentos descargables para el ingreso al PROTECO:
 			            </p>
 			            <ul class="collection with-header">
-			                <li class="collection-item" style="background-color: #E5A3F8"><div class="black-text">Convocatoria<a href="http://proteco.mx/archivos/convocatoria.pdf" class="secondary-content"><i class="material-icons">file_download</i></a></div></li>
-			                <li class="collection-item" style="background-color: #E5A3F8"><div class="black-text">Solicitud de inscripción<a href="http://proteco.mx/archivos/solicitud-de-inscripcion.pdf" class="secondary-content"><i class="material-icons">file_download</i></a></div></li>
-			                <li class="collection-item" style="background-color: #E5A3F8"><div class="black-text">Carta compromiso<a href="http://proteco.mx/archivos/carta-compromiso.pdf" class="secondary-content"><i class="material-icons">file_download</i></a></div></li>
+			                <li class="collection-item" style="background-color: #E5A3F8"><div class="black-text">Convocatoria<a href="files/lorem.pdf" class="secondary-content"><i class="material-icons">file_download</i></a></div></li>
+			                <li class="collection-item" style="background-color: #E5A3F8"><div class="black-text">Solicitud de inscripción<a href="files/lorem.pdf" class="secondary-content"><i class="material-icons">file_download</i></a></div></li>
+			                <li class="collection-item" style="background-color: #E5A3F8"><div class="black-text">Carta compromiso<a href="files/lorem.pdf" class="secondary-content"><i class="material-icons">file_download</i></a></div></li>
 			            </ul>
 			        </div>
 			    </div>
             </div>
         </div>
     </div>
-
-    <div class="row">
+    <div id="test2" class="row col s12">
     	<div class="col s12 m1"><br></div>
         <div class="col s12 m6">
             <div class="card-panel ptc">
