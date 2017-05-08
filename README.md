@@ -2,9 +2,13 @@
 
 ## Integrantes del equipo:
 
-*Armando Valderrama
-*Francisco Espinoza
-*Rodrigo Vivas
+* Armando Valderrama
+* Francisco Espinoza
+* Rodrigo Vivas
+
+---
+
+**EXPLICACION Y FUNCIONAMIENTO DE LA PÁGINA**
 
 Esta es un sitio web que hemos diseñado, haciendo una réplica muy parecida a la página original de PROTECO. Ésta mostrará los mismos elementos 
 que la página original, con la diferencia de que tendrá un diseño diferente y se le agregaron más elementos con los cuales interactuar.
