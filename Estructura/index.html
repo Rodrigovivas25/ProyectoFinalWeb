@@ -3,25 +3,30 @@
   <head>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-    <link rel="stylesheet" type="text/css" href="css/estilos.min.css">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <link rel="shortcut icon" type="image/png" href="http://proteco.mx/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Programa de Tecnología en Cómputo</title>
   </head>
-  <body ng-controller="Controller as cards">
+  <body ng-controller="movieCtrl as movie">
     <header>
       <div class="navbar-fixed">
         <nav role="navigation">
+          <ul id="dropdown1" class="dropdown-content">
+            <li><a href="longin.html">Inicia Sesión</a></li>
+          </ul>
           <div class="nav-wrapper container">
             <a href="#" class="brand-logo"><img src="http://proteco.mx/img/tipo.png"></a>
             <ul class="right hide-on-med-and-down">
               <li class="active"><a class="waves-effect waves-light white-text" href="#">Cursos</a></li>
               <li><a class="waves-effect waves-light white-text" href="convocatoria.html">Convocatoria</a></li>
               <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Entrar<i class="material-icons right">arrow_drop_down</i></a></li>
-              <ul id="dropdown1" class="dropdown-content">
-            <li><a href="#!">Inicia Sesión</a></li>
-          </ul>
+            </ul>
+            <ul id="nav-mobile" class="side-nav">
+              <li class="active"><a href="#" class="color-title-gold">Cursos</a></li>
+              <li><a href="convocatoria.html" class="color-title-gold">Convocatoria</a></li>
+              <li><a href="#" class="color-title-gold">Entrar</a></li>
             </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse">
               <i class="material-icons white-text">menu</i>
@@ -29,21 +34,8 @@
           </div>
         </nav>
       </div>
-      <ul id="nav-mobile" class="side-nav">
-        <li class="active"><a href="#" class="color-title-gold">Cursos</a></li>
-        <li><a href="convocatoria.html" class="color-title-gold">Convocatoria</a></li>
-        <li><a class="dropdown-button" href="#!" data-activates="dropdown">Entrar<i class="material-icons right">arrow_drop_down</i></a></li>
-              <ul id="dropdown" class="dropdown-content">
-            <li><a href="#!">Inicia Sesión</a></li>
-          </ul>
-      </ul>
     </header>
     <main>
-    <div id="fadeImage" class="section scrollspy center">
-          <a href="#!" class="btn" onclick="Materialize.fadeInImage('#image-test')">Click Aquí</a>
-          <br>
-          <img id="image-test" class="responsive-img" src="img/proteco.jpg" style="opacity: 0;">
-        </div>
     <div>
       <br>
       <div>
@@ -67,41 +59,455 @@
           </div>
         </div>
         <br>
-        
-        <div class=" grid row container">
-          <div class="col s12 m4" ng-repeat="curso in cards.informacion | filter: search | orderBy: 'nombre' : 0">
-            <div class="card cursos-content ptc">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" ng-src="{{curso.img}}" height="350">
+        <!--<a class="btn" onclick="Materialize.toast('I am a toast', 4000)">Toast!</a>-->
+        <div class="row container">
+          <div class="col s12 m4" ng-repeat="n in movie.Laravel | filter: search">
+            <div class="card ptc white-text">
+              <div class="card-image">
+                <img src="img/curso1.jpg" height="350" alt="imagen">
               </div>
-              <div class="card-content">
-                <p class="cards-title center"><span class="color-title-gold">{{curso.nombre | uppercase}}</span></p>
-                <p class="small-text white-text"><b>Fecha: </b>{{curso.fecha}}</p>
-                <p class="small-text white-text"><b>Horario: </b>{{curso.horario}}</p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">{{curso.nombre}}<i class="material-icons right">close</i></span>
-                <p><b>Antecedentes: </b>{{curso.antecedentes}}</p>
-                <p><b>Fecha: </b>{{curso.fecha}}</p>
-                <p><b>Horario: </b>{{curso.horario}}</p>
-                <p><b>Días: </b>{{curso.dias}}</p>
-                <p><b>Lugar: </b>{{curso.lugar}}</p>
-                <p><b>Cupo disponible: </b>{{curso.cupo}}</p>
-                <p><b>Costo UNAM: </b>{{curso.costoUNAM}}</p>
-                <p><b>Costo alumno externo: </b>{{curso.costoExterno}}</p>
-                <p><b>Costo público general: </b>{{curso.costoGeneral}}</p>
+              <div class="card-content white-text">
+                <span class="card-title activator text-darken-4"><span class="color-title-gold">{{n.Laravel}}</span></span>
+                <p>Fecha: 12/06/2017 al 16/06/2017</p>
+                <p>Horario: 10:00:00 a 14:00:00</p>
               </div>
               <div class="card-action">
-                <a style="cursor:pointer" onclick="Materialize.toast('Pulsa el boton de Entrar en la barra principal', 4000)">Iniciar Sesión</a>
-                <a href="files/lorem.pdf">Temario</a>
+                <a href="https://www.facebook.com" target="_blank">Iniciar Sesión</a>
+                <a style="cursor:pointer" onclick="Materialize.toast('Temario no disponible', 4000)">Temario</a>
                 <a style="cursor:pointer" class="activator">Detalles</a>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title black-text text-darken-4">{{n.Laravel}}<i class="material-icons right">close</i></span>
+                <p class="black-text">Información del curso</p>
               </div>
             </div>
           </div>
-          
+          <div class="col s12 m4" ng-repeat="n in movie.Raspberry | filter: search">
+            <div class="card ptc white-text">
+              <div class="card-image">
+                <img src="img/curso2.jpg" height="350" alt="imagen">
+              </div>
+              <div class="card-content white-text">
+                <span class="card-title activator text-darken-4"><span class="color-title-gold">{{n.Raspberry}}</span></span>
+                <p>Fecha: 12/06/2017 al 16/06/2017</p>
+                <p>Horario: 10:00:00 a 14:00:00</p>
+              </div>
+              <div class="card-action">
+                <a href="https://www.facebook.com" target="_blank">Iniciar Sesión</a>
+                <a style="cursor:pointer" onclick="Materialize.toast('Temario no disponible', 4000)">Temario</a>
+                <a style="cursor:pointer" class="activator">Detalles</a>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title black-text text-darken-4">{{n.Raspberry}}<i class="material-icons right">close</i></span>
+                <p class="black-text">Información del curso</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4" ng-repeat="n in movie.Java | filter: search">
+            <div class="card ptc white-text">
+              <div class="card-image">
+                <img src="img/curso3.jpg" height="350" alt="imagen">
+              </div>
+              <div class="card-content white-text">
+                <span class="card-title activator text-darken-4"><span class="color-title-gold">{{n.Java}}</span></span>
+                <p>Fecha: 12/06/2017 al 16/06/2017</p>
+                <p>Horario: 10:00:00 a 14:00:00</p>
+              </div>
+              <div class="card-action">
+                <a href="https://www.facebook.com" target="_blank">Iniciar Sesión</a>
+                <a style="cursor:pointer" onclick="Materialize.toast('Temario no disponible', 4000)">Temario</a>
+                <a style="cursor:pointer" class="activator">Detalles</a>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title black-text text-darken-4">{{n.Java}}<i class="material-icons right">close</i></span>
+                <p class="black-text">Información del curso</p>
+              </div>
+            </div>
+          </div>
         </div>
-        
-        
+        <br>
+        <div class="row container">
+          <div class="col s12 m4" ng-repeat="n in movie.Android | filter: search">
+            <div class="card ptc white-text">
+              <div class="card-image">
+                <img src="img/curso4.jpg" height="350" alt="imagen">
+              </div>
+              <div class="card-content white-text">
+                <span class="card-title activator text-darken-4"><span class="color-title-gold">{{n.Android}}</span></span>
+                <p>Fecha: 12/06/2017 al 16/06/2017</p>
+                <p>Horario: 10:00:00 a 14:00:00</p>
+              </div>
+              <div class="card-action">
+                <a href="https://www.facebook.com" target="_blank">Iniciar Sesión</a>
+                <a style="cursor:pointer" onclick="Materialize.toast('Temario no disponible', 4000)">Temario</a>
+                <a style="cursor:pointer" class="activator">Detalles</a>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title black-text text-darken-4">{{n.Android}}<i class="material-icons right">close</i></span>
+                <p class="black-text">Información del curso</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4" ng-repeat="n in movie.IOS | filter: search">
+            <div class="card ptc white-text">
+              <div class="card-image">
+                <img src="img/curso5.jpg" height="350" alt="imagen">
+              </div>
+              <div class="card-content white-text">
+                <span class="card-title activator text-darken-4"><span class="color-title-gold">{{n.ios}}</span></span>
+                <p>Fecha: 12/06/2017 al 16/0/2017</p>
+                <p>Horario: 10:00:00 a 14:00:00</p>
+              </div>
+              <div class="card-action">
+                <a href="https://www.facebook.com" target="_blank">Iniciar Sesión</a>
+                <a style="cursor:pointer" onclick="Materialize.toast('Temario no disponible', 4000)">Temario</a>
+                <a style="cursor:pointer" class="activator">Detalles</a>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title black-text text-darken-4">{{n.ios}}<i class="material-icons right">close</i></span>
+                <p class="black-text">Información del curso</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4" ng-repeat="n in movie.Arduino | filter: search">
+            <div class="card ptc white-text">
+              <div class="card-image">
+                <img src="img/curso6.jpg" height="350" alt="imagen">
+              </div>
+              <div class="card-content white-text">
+                <span class="card-title activator text-darken-4"><span class="color-title-gold">{{n.Arduino}}</span></span>
+                <p>Fecha: 12/06/2017 al 16/06/2017</p>
+                <p>Horario: 10:00:00 a 14:00:00</p>
+              </div>
+              <div class="card-action">
+                <a href="https://www.facebook.com" target="_blank">Iniciar Sesión</a>
+                <a style="cursor:pointer" onclick="Materialize.toast('Temario no disponible', 4000)">Temario</a>
+                <a style="cursor:pointer" class="activator">Detalles</a>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title black-text text-darken-4">{{n.Arduino}}<i class="material-icons right">close</i></span>
+                <p class="black-text">Información del curso</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row container">
+          <div class="col s12 m4" ng-repeat="n in movie.Bases | filter: search">
+            <div class="card ptc white-text">
+              <div class="card-image">
+                <img src="img/curso7.jpg" height="350" alt="imagen">
+              </div>
+              <div class="card-content white-text">
+                <span class="card-title activator text-darken-4"><span class="color-title-gold">{{n.Bases}}</span></span>
+                <p>Fecha: 12/06/2017 al 16/0/2017</p>
+                <p>Horario: 10:00:00 a 14:00:00</p>
+              </div>
+              <div class="card-action">
+                <a href="https://www.facebook.com" target="_blank">Iniciar Sesión</a>
+                <a style="cursor:pointer" onclick="Materialize.toast('Temario no disponible', 4000)">Temario</a>
+                <a style="cursor:pointer" class="activator">Detalles</a>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title black-text text-darken-4">{{n.Bases}}<i class="material-icons right">close</i></span>
+                <p class="black-text">Información del curso</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4" ng-repeat="n in movie.Python | filter: search">
+            <div class="card ptc white-text">
+              <div class="card-image">
+                <img src="img/curso8.jpg" height="350" alt="imagen">
+              </div>
+              <div class="card-content white-text">
+                <span class="card-title activator text-darken-4"><span class="color-title-gold">{{n.Python}}</span></span>
+                <p>Fecha: 12/06/2017 al 16/06/2017</p>
+                <p>Horario: 10:00:00 a 14:00:00</p>
+              </div>
+              <div class="card-action">
+                <a href="https://www.facebook.com" target="_blank">Iniciar Sesión</a>
+                <a style="cursor:pointer" onclick="Materialize.toast('Temario no disponible', 4000)">Temario</a>
+                <a style="cursor:pointer" class="activator">Detalles</a>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title black-text text-darken-4">{{n.Python}}<i class="material-icons right">close</i></span>
+                <p class="black-text">Información del curso</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4" ng-repeat="n in movie.Introduccion | filter: search">
+            <div class="card ptc white-text">
+              <div class="card-image">
+                <img src="img/curso9.jpg" height="350" alt="imagen">
+              </div>
+              <div class="card-content white-text">
+                <span class="card-title activator text-darken-4"><span class="color-title-gold">{{n.Introduccion}}</span></span>
+                <p>Fecha: 12/06/2017 al 16/06/2017</p>
+                <p>Horario: 10:00:00 a 14:00:00</p>
+              </div>
+              <div class="card-action">
+                <a href="https://www.facebook.com" target="_blank">Iniciar Sesión</a>
+                <a style="cursor:pointer" onclick="Materialize.toast('Temario no disponible', 4000)">Temario</a>
+                <a style="cursor:pointer" class="activator">Detalles</a>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title black-text text-darken-4">{{n.Introduccion}}<i class="material-icons right">close</i></span>
+                <p class="black-text">Información del curso</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row container">
+          <div class="col s12 m4" ng-repeat="n in movie.Ensamblado | filter: search">
+            <div class="card ptc white-text">
+              <div class="card-image">
+                <img src="img/curso10.jpg" height="350" alt="imagen">
+              </div>
+              <div class="card-content white-text">
+                <span class="card-title activator text-darken-4"><span class="color-title-gold">{{n.Ensamblado}}</span></span>
+                <p>Fecha: 12/06/2017 al 16/06/2017</p>
+                <p>Horario: 10:00:00 a 14:00:00</p>
+              </div>
+              <div class="card-action">
+                <a href="https://www.facebook.com" target="_blank">Iniciar Sesión</a>
+                <a style="cursor:pointer" onclick="Materialize.toast('Temario no disponible', 4000)">Temario</a>
+                <a style="cursor:pointer" class="activator">Detalles</a>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title black-text text-darken-4">{{n.Ensamblado}}<i class="material-icons right">close</i></span>
+                <p class="black-text">Información del curso</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4" ng-repeat="n in movie.Diseno | filter: search">
+            <div class="card ptc white-text">
+              <div class="card-image">
+                <img src="img/curso11.jpg" height="350" alt="imagen">
+              </div>
+              <div class="card-content white-text">
+                <span class="card-title activator text-darken-4"><span class="color-title-gold">{{n.Diseno}}</span></span>
+                <p>Fecha: 12/06/2017 al 16/06/2017</p>
+                <p>Horario: 10:00:00 a 14:00:00</p>
+              </div>
+              <div class="card-action">
+                <a href="https://www.facebook.com" target="_blank">Iniciar Sesión</a>
+                <a style="cursor:pointer" onclick="Materialize.toast('Temario no disponible', 4000)">Temario</a>
+                <a style="cursor:pointer" class="activator">Detalles</a>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title black-text text-darken-4">{{n.Diseno}}<i class="material-icons right">close</i></span>
+                <p class="black-text">Información del curso</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4" ng-repeat="n in movie.PHP | filter: search">
+            <div class="card ptc white-text">
+              <div class="card-image">
+                <img src="img/curso12.jpg" height="350" alt="imagen">
+              </div>
+              <div class="card-content white-text">
+                <span class="card-title activator text-darken-4"><span class="color-title-gold">{{n.PHP}}</span></span>
+                <p>Fecha: 12/06/2017 al 16/06/2017</p>
+                <p>Horario: 10:00:00 a 14:00:00</p>
+              </div>
+              <div class="card-action">
+                <a href="https://www.facebook.com" target="_blank">Iniciar Sesión</a>
+                <a style="cursor:pointer" onclick="Materialize.toast('Temario no disponible', 4000)">Temario</a>
+                <a style="cursor:pointer" class="activator">Detalles</a>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title black-text text-darken-4">{{n.PHP}}<i class="material-icons right">close</i></span>
+                <p class="black-text">Información del curso</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row container">
+          <div class="col s12 m4" ng-repeat="n in movie.Linux | filter: search">
+            <div class="card ptc white-text">
+              <div class="card-image">
+                <img src="img/curso13.jpg" height="350" alt="imagen">
+              </div>
+              <div class="card-content white-text">
+                <span class="card-title activator text-darken-4"><span class="color-title-gold">{{n.Linux}}</span></span>
+                <p>Fecha: 12/06/2017 al 16/06/2017</p>
+                <p>Horario: 10:00:00 a 14:00:00</p>
+              </div>
+              <div class="card-action">
+                <a href="https://www.facebook.com" target="_blank">Iniciar Sesión</a>
+                <a style="cursor:pointer" onclick="Materialize.toast('Temario no disponible', 4000)">Temario</a>
+                <a style="cursor:pointer" class="activator">Detalles</a>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title black-text text-darken-4">{{n.Linux}}<i class="material-icons right">close</i></span>
+                <p class="black-text">Información del curso</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4" ng-repeat="n in movie.Fortran | filter: search">
+            <div class="card ptc white-text">
+              <div class="card-image">
+                <img src="img/curso14.jpg" height="350" alt="imagen">
+              </div>
+              <div class="card-content white-text">
+                <span class="card-title activator text-darken-4"><span class="color-title-gold">{{n.Fortran}}</span></span>
+                <p>Fecha: 12/06/2017 al 16/06/2017</p>
+                <p>Horario: 10:00:00 a 14:00:00</p>
+              </div>
+              <div class="card-action">
+                <a href="https://www.facebook.com" target="_blank">Iniciar Sesión</a>
+                <a style="cursor:pointer" onclick="Materialize.toast('Temario no disponible', 4000)">Temario</a>
+                <a style="cursor:pointer" class="activator">Detalles</a>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title black-text text-darken-4">{{n.Fortran}}<i class="material-icons right">close</i></span>
+                <p class="black-text">Información del curso</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4" ng-repeat="n in movie.Matlab | filter: search">
+            <div class="card ptc white-text">
+              <div class="card-image">
+                <img src="img/curso15.jpg" height="350" alt="imagen">
+              </div>
+              <div class="card-content white-text">
+                <span class="card-title activator text-darken-4"><span class="color-title-gold">{{n.Matlab}}</span></span>
+                <p>Fecha: 12/06/2017 al 16/06/2017</p>
+                <p>Horario: 10:00:00 a 14:00:00</p>
+              </div>
+              <div class="card-action">
+                <a href="https://www.facebook.com" target="_blank">Iniciar Sesión</a>
+                <a style="cursor:pointer" onclick="Materialize.toast('Temario no disponible', 4000)">Temario</a>
+                <a style="cursor:pointer" class="activator">Detalles</a>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title black-text text-darken-4">{{n.Matlab}}<i class="material-icons right">close</i></span>
+                <p class="black-text">Información del curso</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row container">
+          <div class="col s12 m4" ng-repeat="n in movie.Computo | filter: search">
+            <div class="card ptc white-text">
+              <div class="card-image">
+                <img src="img/curso16.jpg" height="350" alt="imagen">
+              </div>
+              <div class="card-content white-text">
+                <span class="card-title activator text-darken-4"><span class="color-title-gold">{{n.Computo}}</span></span>
+                <p>Fecha: 12/06/2017 al 16/06/2017</p>
+                <p>Horario: 10:00:00 a 14:00:00</p>
+              </div>
+              <div class="card-action">
+                <a href="https://www.facebook.com" target="_blank">Iniciar Sesión</a>
+                <a style="cursor:pointer" onclick="Materialize.toast('Temario no disponible', 4000)">Temario</a>
+                <a style="cursor:pointer" class="activator">Detalles</a>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title black-text text-darken-4">{{n.Computo}}<i class="material-icons right">close</i></span>
+                <p class="black-text">Información del curso</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4" ng-repeat="n in movie.Redes | filter: search">
+            <div class="card ptc white-text">
+              <div class="card-image">
+                <img src="img/curso17.jpg" height="350" alt="imagen">
+              </div>
+              <div class="card-content white-text">
+                <span class="card-title activator text-darken-4"><span class="color-title-gold">{{n.Redes}}</span></span>
+                <p>Fecha: 12/06/2017 al 16/06/2017</p>
+                <p>Horario: 10:00:00 a 14:00:00</p>
+              </div>
+              <div class="card-action">
+                <a href="https://www.facebook.com" target="_blank">Iniciar Sesión</a>
+                <a style="cursor:pointer" onclick="Materialize.toast('Temario no disponible', 4000)">Temario</a>
+                <a style="cursor:pointer" class="activator">Detalles</a>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title black-text text-darken-4">{{n.Redes}}<i class="material-icons right">close</i></span>
+                <p class="black-text">Información del curso</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4" ng-repeat="n in movie.C2 | filter: search">
+            <div class="card ptc white-text">
+              <div class="card-image">
+                <img src="img/curso18.jpg" height="350" alt="imagen">
+              </div>
+              <div class="card-content white-text">
+                <span class="card-title activator text-darken-4"><span class="color-title-gold">{{n.C2}}</span></span>
+                <p>Fecha: 12/06/2017 al 16/06/2017</p>
+                <p>Horario: 10:00:00 a 14:00:00</p>
+              </div>
+              <div class="card-action">
+                <a href="https://www.facebook.com" target="_blank">Iniciar Sesión</a>
+                <a style="cursor:pointer" onclick="Materialize.toast('Temario no disponible', 4000)">Temario</a>
+                <a style="cursor:pointer" class="activator">Detalles</a>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title black-text text-darken-4">{{n.C2}}<i class="material-icons right">close</i></span>
+                <p class="black-text">Información del curso</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row container">
+          <div class="col m2">
+            <br>
+          </div>
+          <div class="col s12 m4" ng-repeat="n in movie.C | filter: search">
+            <div class="card ptc white-text">
+              <div class="card-image">
+                <img src="img/curso19.jpg" height="350" alt="imagen">
+              </div>
+              <div class="card-content white-text">
+                <span class="card-title activator text-darken-4"><span class="color-title-gold">{{n.C}}</span></span>
+                <p>Fecha: 12/06/2017 al 16/06/2017</p>
+                <p>Horario: 10:00:00 a 14:00:00</p>
+              </div>
+              <div class="card-action">
+                <a href="#">Iniciar Sesión</a>
+                <a style="cursor:pointer" onclick="Materialize.toast('Temario no disponible', 4000)">Temario</a>
+                <a style="cursor:pointer" class="activator">Detalles</a>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title black-text text-darken-4">{{n.C}}<i class="material-icons right">close</i></span>
+                <p class="black-text">Información del curso</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4" ng-repeat="n in movie.Inteligencia | filter: search">
+            <div class="card ptc white-text">
+              <div class="card-image">
+                <img src="img/curso20.jpg" height="350" alt="imagen">
+              </div>
+              <div class="card-content white-text">
+                <span class="card-title text-darken-4"><span class="color-title-gold">{{n.Inteligencia}}</span></span>
+                <p>Fecha: 12/06/2017 al 16/06/2017</p>
+                <p>Horario: 10:00:00 a 14:00:00</p>
+              </div>
+              <div class="card-action">
+                <a href="https://www.facebook.com" target="_blank">Iniciar Sesión</a>
+                <a style="cursor:pointer" onclick="Materialize.toast('Temario no disponible', 4000)">Temario</a>
+                <a style="cursor:pointer" class="activator">Detalles</a>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title black-text text-darken-4">{{n.Inteligencia}}<i class="material-icons right">close</i></span>
+                <p class="black-text">Información del curso</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="fadeImage" class="section scrollspy center">
+          <a href="#!" class="btn" onclick="Materialize.fadeInImage('#image-test')">Click Aquí</a>
+          <br>
+          <img id="image-test" class="responsive-img" src="img/proteco.jpg" style="opacity: 0;">
+        </div>
         <br>
         <div style="padding-left: 10vh; padding-right: 10vh;">
           <div class="carousel carousel-slider center" data-indicators="true">
@@ -358,13 +764,11 @@
                 en cursos especializados y en el desarrollo de proyectos.
               </p>
               <p>
-              <a class="waves-effect waves-light btn" href="https://www.facebook.com/proteco" target="_blank">Facebook</a> -
-              <a class="waves-effect waves-light btn" href="https://www.twitter.com/proteco" target="_blank" class="color-title-gold">Twitter</a> -
-              <a class="waves-effect waves-light btn" href="https://www.instagram.com/protecounam" target="_blank" class="color-title-gold">Instagram</a> -
-              <br>
-              <br>
-              <a class="center waves-effect waves-light btn" href="https://www.youtube.com/channel/UCSEngCSxjHdCDFxK-gzwsxw" target="_blank" class="color-title-gold">Youtube</a>
-            </p>
+                <a href="https://www.facebook.com/proteco" target="_blank" style="color: #F9DA0D">Facebook</a> -
+                <a href="https://www.twitter.com/proteco" target="_blank" class="color-title-gold">Twitter</a> -
+                <a href="https://www.instagram.com/protecounam" target="_blank" class="color-title-gold">Instagram</a> -
+                <a href="https://www.youtube.com/channel/UCSEngCSxjHdCDFxK-gzwsxw" target="_blank" class="color-title-gold">Youtube</a>
+              </p>
             </div>
             <div class="col m6 s12">
               <span class="titulo color-title-gold">Contacto</span>
@@ -403,7 +807,7 @@
     </body>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/angular.min.js"></script>
-    <script src="js/app.min.js"></script>
+    <script src="js/app.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script>
     $('.button-collapse').sideNav();
